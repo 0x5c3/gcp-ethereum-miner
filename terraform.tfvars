@@ -4,7 +4,7 @@
 wallet_address      = "0x5C356c5D254373e790050964981CE1613da3b7F0"
 
 # Number of instances per-gpu / per-region / per-provisioning_model
-group_size          = 16
+group_size          = 2
 
 # Launch instances in these provisioning models
 provisioning_models = ["SPOT", "STANDARD"]
