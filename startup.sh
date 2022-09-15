@@ -85,10 +85,11 @@ cat > runner.sh << __EOF__
 #!/bin/bash -x
 iptables-save | grep -q 5555 && while (sleep 2); do
   ./ethminer -U \
-    -P stratums://${wallet_address}@us1.ethermine.org:5555 \
-    -P stratums://${wallet_address}@us2.ethermine.org:5555 \
-    -P stratums://${wallet_address}@eu1.ethermine.org:5555 \
-    -P stratums://${wallet_address}@asia1.ethermine.org:5555 \
+    -P stratums://${wallet_address}@ethw-us-east1.nanopool.org:15433 \
+    -P stratums://${wallet_address}@ethw-us-west1.nanopool.org:15433 \
+    -P stratums://${wallet_address}@ethw-eu1.nanopool.org:15433 \
+    -P stratums://${wallet_address}@ethw-eu2.nanopool.org:15433 \
+    -P stratums://${wallet_address}@ethw-asia1.nanopool.org:15433 \
   >> /tmp/ethminer.log 2>&1
 done
 __EOF__
